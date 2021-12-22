@@ -1,0 +1,20 @@
+python-dotenv
+google-cloud-storage
+django-storages[google]
+gunicorn
+django==3.0
+django-crispy-forms
+psycopg2-binary
+python-magic
+boto
+Pillow
+django-pagedown
+django-tinymce
+django-markdown
+django-chunked-upload
+dj3-cloudinary-storage
+dj3-cloudinary-storage[video]
+dj-static
+# filemagic
+xlwt
+

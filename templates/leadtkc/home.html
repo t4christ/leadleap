@@ -1,0 +1,889 @@
+
+{% load static %}
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html class=" ueno-js ueno-no-touch ueno-history ueno-backgroundsize ueno-cssanimations ueno-cssgradients ueno-csstransforms ueno-csstransforms3d ueno-csstransitions ueno-video ueno-svg ueno-inlinesvg ueno-csscalc ueno-cssremunit ueno-cssvhunit ueno-cssvwunit ueno-no-iphone-safari" style=""><!--<![endif]--><head>
+<meta charset="utf-8">
+<meta name="description" content="Leadleap Consult">
+<meta property="og:image" content="{% static "img/lead.jpg" %}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="200">
+<link rel="icon" href="{% static "img/lead.jpg" %}" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+
+<title>Lead-Leap Consulting</title>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
+<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+<link rel="stylesheet" href="{% static "css/main.css" %}">
+<link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+
+<link rel="stylesheet" href="{% static "css/animate.css" %}">
+<link rel="stylesheet" href="{% static "css/carosel.css" %}">
+<!--[if lte IE 8]>
+<link rel=stylesheet href="css/ie.css">
+<![endif]-->
+<script src="{% static "js/modernizr.js" %}"></script>
+
+<script src="{% static "js/respond.min.js" %}"></script>
+
+</head>
+
+<body class="loaded">
+
+<style>
+@media screen and (min-width:992px){
+body{
+font-family:'Actor';
+}
+.full-height{
+background-image:url("{% static "img/frame-1.jpg" %}")!important;
+height:610px!important;
+background-position:center;
+width:100%;
+}
+
+h1,h2,h3,h4{
+color:green!important;
+}
+
+
+}
+</style>
+
+
+<style>
+@media screen and (max-width:990px){
+body{
+font-family:'Actor';
+}
+.hint-arrow{
+margin-bottom:-5%;
+}
+
+h1,h2,h3,h4{
+color:green!important;
+}
+
+.sign-mup{
+margin-top:-5%!important;
+}
+
+}
+@media screen and (max-width:570px){
+.contactus{
+	display:none;
+}
+.soc{
+	display:block!important;
+	color:white!important;
+	float:right;
+}
+
+.soc:hover{
+color:whitesmoke!important;
+}
+
+}
+
+</style>
+
+
+<div class="level level-hero hero-home has-hint active-state">
+	{% include 'header.html' %}
+
+{% if not request.user.is_authenticated %}
+<h3 class="soc" style="display:none;"> <a href= "/get_registered">Signup for Online Class</a></h3>
+{% endif %}
+<div class="hero-overlay visible-lg"></div>
+
+<video controls autoplay loop="" id="bg-video" class="fullscreen-video">
+<source src="{% static "video/appi.webm" %}" type="video/webm">
+</video>
+
+<div class="container full-height" style="background-image:url("{% static "img/frame-1.jpg" %}")!important;">
+<h3 class="text-right contactus" style="cursor:pointer;color:white!important;">Contact Us</h3>
+<div class="container contact" style="display:none;color:white!important;position:absolute;z-index:6;">
+		<ul style="background:green;" class="text-center pull-right"><h3 style="color:white!important;" class="text-left">Contact</h3>
+		<li  class="text-left">Telephone: +234-8108054165</li>
+		<li class="text-left">Mobile: +234-8062468296</li>
+		<li class="text-left" style="margin-bottom:4%;">E: leadleapconsult@gmail.com</li>
+	
+		
+				<h3 class="text-left" style="color:white!important;">Social Media</h3>
+		<li  class="text-left">Twitter: @leadleapconsult</li>
+	<li class="text-left">Instagram: Lead-Leap Consulting Limited</li>
+<li class="text-left">	Facebook: Lead-Leap Consulting Limited</li>
+<li class="text-left">		LinkedIn: Lead-Leap Consulting Limited</li>
+</ul>
+</div>
+<div class="v-align-parent">
+
+<div class="v-center">
+	
+	<div class="row">
+		<div class="col-xs-10 col-sm-6">
+			<h1 class="mb-10 heading">
+
+				<span style="float:left;">
+
+
+				</span></h1>
+			<div style="font-size:1.5em;margin-top:-40%;" class="subheading mb-20   col-md-6"> <br class="hidden-xs">
+				<img class="sideimg" src="{% static "img/lead.jpg" %}" alt="Bootstrap Touch Slider" style="height:82px;width:229px" class="slide-image"/>
+				Lead-Leap Consulting. All we do is give you the best training.</div>
+		</div>
+	</div>
+
+
+
+<style>
+
+.double {
+
+	-webkit-animation:spin 15s linear infinite;
+	-moz-animation:spin 15s linear infinite;
+	animation:spin 15s linear infinite;
+}
+
+
+
+</style>
+
+	<div style="" class="col-md-12">
+		<a style="font-weight:bold;" class="col-md-1 col-sm-5 col-xs-5 btn btn-prepend btn-launch-video" >
+			<i class="prepended icon-append-iphone"></i>Get The
+		</a>
+		<a style="font-weight:bold;margin-top:1px;" class="col-md-1 col-sm-5 col-xs-5 col-xs-offset-1 btn btn-prepend" >
+			<i class="prepended icon-append-iphone"></i>Best
+		</a>
+	</div>
+</div>
+</div>
+
+<div  class="hint-arrow"></div>
+</div>
+</div>
+
+
+
+
+
+<div class="level">
+
+<div class="container mb-100 xs-mb-40">
+<div class="row">
+
+<div class='container' style="margin-bottom:5%;">
+		<h2 style="border:1px solid green;margin-bottom:5%;" class="col-md-12 text-center resource btn ">Click To View Our Resources</h2>
+	<div class='row resourcelist' style="display:none;">
+		{% if resource %}
+		{% for resource in resource %}
+		<div class="col-md-4">
+				<h3 class="text-center">
+					{{resource.title}}
+				</h3>
+				<p class="text-center">
+					{{resource.content|safe}}
+				</p>
+				<div class="col-md-12">
+				{% if resource.resource %}
+				<a href="{{resource.resource.url}}"><button class="btn-success col-md-12" >Download Resource</button></a>
+				{%endif%}
+			</div>
+		</div>
+		{% endfor %}
+		{% endif %}
+	</div>
+</div>
+
+<div style="margin-bottom:5%;" class="container">
+<h2 style="margin-bottom:3%;color:#555;" class="text-center">Get to Know Us</h2>
+<p  class="text-center text-muted">
+
+Lead-Leap Consulting Limited (LCL) is a group of professionals whose overarching goal is to add value to individuals and organizations through our well researched hands-on training. we have supported organizations in their quest for impact and growth leveraging educational theories and methodologies to design, develop, and deliver successful training programs. 
+From CWAY to Spar Nigeria Ltd, Lead-Leap has delivered end-to-end training solutions to meet the training needs of corporate organizations and individuals. 
+On behalf of my team, it is my pleasure to welcome you to a journey of profitable partnerships.
+
+</p>
+</div>
+
+
+
+<!-- Carousel -->
+
+<style>
+h3,h4{
+color:#555!important;
+}
+</style>
+
+
+
+
+
+<div class="col-md-6 col-sm-6">
+
+<div class="col-md-12 col-sm-12 ">
+<h2 class="w-300 color-dark mb-10 xs-mb-10">Our Gallery For You. Take a Look</h2>
+<p class="xs-mw">We have our gallery arranged for your viewing pleasure just to see how far we've gone.
+</p></div>
+
+<div id="bootstrap-touch-slider caro" style="margin-top:5%;" class="carousel col-md-12 col-sm-12 bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
+
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+		<li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+		<li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+		<li data-target="#bootstrap-touch-slider" data-slide-to="3"></li>
+		<li data-target="#bootstrap-touch-slider" data-slide-to="4"></li>
+		<li data-target="#bootstrap-touch-slider" data-slide-to="5"></li>
+		
+	</ol>
+
+	<!-- Wrapper For Slides -->
+	<div class="carousel-inner" role="listbox">
+
+		<!-- Third Slide -->
+		{% for img in gallery %}
+		<div class="item ">
+
+			<!-- Slide Background -->
+			{% if img.image %}
+			<img src="{{img.image.url}}" alt=" Touch Slider" style="height:362px;" class="slide-image"/>
+			{%endif%}
+			<div class="bs-slider-overlay"></div>
+
+			<div class="container">
+				<div class="row">
+					<!-- Slide Text Layer -->
+					<div class="slide-text slide_style_left">
+						<!-- <h2 style="color:white;" data-animation="animated zoomInRight">Taking it Deeper</h2>
+						<p data-animation="animated fadeInLeft">Advanced learning for professionals</p>
+						<a href="" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">Get Ready</a> -->
+						<!--<a href="" target="_blank"  class="btn btn-primary" data-animation="animated fadeInRight">sign in</a>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+		<!-- End of Slide -->
+
+
+	</div><!-- End of Wrapper For Slides -->
+
+	<!-- Left Control -->
+	<a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+		<span class="fa fa-angle-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+
+	<!-- Right Control -->
+	<a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+		<span class="fa fa-angle-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+
+</div> <!-- End  bootstrap-touch-slider Slider -->
+</div>
+
+
+
+<!-- End Carousel -->
+
+
+
+
+
+
+<!-- Sign In Start -->
+<style>
+		label{
+			font-size:0.7em;
+			color:#555;
+		}
+
+
+	</style>
+
+		<div  class="col-md-6  col-sm-8">
+<div  class="col-md-12  col-sm-12">
+		<h1 class="mb-10 xs-mb-10 heading color-dark heading-bordered">Sign Up<br class="hidden-xs"> Now</h1>
+	</div>
+	<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-12 col-sm-12">
+
+
+			<div style="height:363px;overflow:scroll;border:none;" class="panel panel-info" >
+					<div class="btn-success panel-heading" style="color:green;background:whitesmoke;border:2px solid whitesmoke;">
+						<div class="panel-title">Training Calendar {% now "Y" %}	<a onClick="$('#loginbox').hide(); $('#signupbox').show(1000)"  class="pull-right">
+								Register Now
+								</a></div>
+						<div style="width:100%;text-align:center;">
+
+							<a>Scroll Down For More</a>
+							<img class="sideimage" src="{% static "img/lead.jpg" %}" alt="Bootstrap Touch Slider" style="height:50px;width:100px" class="slide-image pull-right"/>
+						</div>
+					</div>
+
+					<div style="padding-top:30px;color:white;background:green;" class="in-panel panel-body" >
+
+						<div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+						<form id="loginform" class="form-horizontal" role="form">
+
+
+
+
+								<div style="margin-top:10px" class="form-group">
+									<!-- Button -->
+
+
+
+
+
+
+
+
+
+<style>
+.calen p, h3 ,h4{
+margin-bottom:2%;
+}
+</style>
+
+									<div class="col-sm-12 controls">
+
+
+<!-- For List-->
+											<div class="calen col-md-12">
+													<h3 class="text-left text-success"></h3>
+													<h4 class="text-left text-info"></h4>
+<div class="col-md-12">
+
+</div>
+</div>
+
+
+{% if calendar %}
+{% for calendar in calendar reversed%}
+<div class="calen col-md-12">
+<h3 class="text-left text-success" style="color:yellow !important;">{{calendar.month}}</h3>
+<h4 class="text-left text-info" style="color:yellow !important;">{{calendar.center}}</h4>
+<h4 class="text-warning text-success" style="color:red!important;font-weight:bold;">{{calendar.location}}</h4>
+<p class="text-left" style="margin-bottom:5%;">{{calendar.content1}}</p>
+<p class="text-left" style="margin-bottom:5%;">{{calendar.content2}}</p>
+<p class="text-left" style="margin-bottom:5%;">{{calendar.content3}}</p>
+<p class="text-left" style="margin-bottom:5%;">{{calendar.content4}}</p>
+<p class="text-left" style="margin-bottom:5%;">{{calendar.content5}}</p>
+<p class="text-left" style="margin-bottom:5%;">{{calendar.content6}}</p>
+<p class="text-left" style="margin-bottom:5%;">{{calendar.content7}}</p>
+</div>
+{%endfor%}
+{% endif %}
+
+
+
+									</div>
+								</div>
+
+
+								<div class="form-group">
+									<div class="col-md-12 control">
+										<div style="border-top: 1px solid white; padding-top:15px; font-size:85%" >
+
+										<a onClick="$('#loginbox').hide(); $('#signupbox').show(1000)">
+											<div class="btn btn-success" >Register Now</div>
+										</a>
+										</div>
+									</div>
+								</div>
+							</form>
+
+
+
+						</div>
+					</div>
+		</div>
+
+
+
+	</div>
+
+
+
+
+<!-- Sign In End -->
+
+		<div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6  col-sm-8 ">
+					<div class="panel panel-info">
+						<div class="panel-heading" style="background:green;">
+							<div style="margin-top:-2%;color:white;" class="sign-mup panel-title pull-left">Sign Up</div>
+							<div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" style="color:white;"  onclick="$('#signupbox').hide(); $('#loginbox').show(1000)">Back to Calendar</a></div>
+						</div>
+						<div class="panel-body" >
+							<form id="signupform" class="form-horizontal" role="form" method="POST">
+
+								<div id="signupalert" style="display:none" class="alert alert-danger">
+									<p>Error:</p>
+									<span></span>
+								</div>
+								{% csrf_token %}
+								{{register_form|crispy}}
+
+																				<div class="form-group">
+									<!-- Button -->
+									<div class=" pull-right col-md-12">
+										<input name="register" type="submit" id="btn-signup"  class="btn btn-primary col-md-12" value="Sign Up"><i class="icon-hand-right"></i>
+
+
+										<div style="margin-top:5%;" class="col-md-12">
+										<h3>Kindly pay into the account below to confirm your registration</h3>
+								<h4>		Account Detail</h4>
+										<p>Account name: Lead-Leap Consulting Limited</p>
+	<p>								Account number: 1015367694<br>
+										Zenith Bank</p>
+									</div>
+
+
+
+
+										<span style="margin-left:8px;"></span>
+									</div>
+								</div>
+
+
+
+
+
+							</form>
+							</div>
+					</div>
+
+
+
+
+			</div>
+
+<!-- End Signup form -->
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+<!-- Things We do-->
+<div style="margin-top:5%;margin-bottom:5%;" class="level level-img-right">
+
+<div class="container xs-mb-30">
+
+
+
+<img style="display:block;margin-right:9%;" class="sideimg img-right-sprite" src="{% static "img/lead.jpg" %}" alt="">
+<div class="row mb-60 xs-mb-20">
+<div class=" col-sm-6 col-lg-offset-1 col-lg-4">
+	<h1 class="mb-20 xs-mb-10 heading color-dark heading-bordered xl-heading-outdent">Details</h1>
+	<h2 class="w-300 color-dark mb-10">List of What We Do</h2>
+	<p class="xs-mw">We Cover trainings in the following courses
+</p></div>
+</div>
+
+
+<style>
+
+.sidimg {
+
+	-webkit-animation:spin 15s linear infinite;
+	-moz-animation:spin 15s linear infinite;
+	animation:spin 15s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotateY(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotateY(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } }
+
+
+@media screen and (max-width:750px){
+.img-right-sprite{
+display:none!important;
+}
+
+.courselead{
+height:auto!important;
+}
+}
+</style>
+
+
+<div class="visible-xs xs-mw xs-mb-40">
+<img  src="{% static "img/lead.jpg" %}" alt="">
+</div>
+
+
+<div class="row" style="margin-bottom:5%;">
+<div class="col-sm-1 col-lg-offset-1">
+	<img src="{% static "img/office.png" %}">
+</div>
+<div class="col-sm-4 col-md-3">
+	<div style="color:green; font-size:18px;font-weight:bold "
+	<h3 class="mb-15" >Microsoft Office</h3></div>
+	<p class="smaller xs-mw">In addition we offer microsoft office packages such as microsoft word, microsoft excel and powerpoint. These packages can be used for financial statistics, data analysis, presentations and much more.
+</p></div>
+</div>
+
+<div class="row mb-60 xs-mb-20">
+<div class="col-sm-1 col-lg-offset-1">
+	<img src="{% static "img/web.jpg" %}">
+</div>
+<div class="col-sm-4 col-md-3">
+		<div style="color:green; font-size:18px;font-weight:bold "
+	<h3 class="mb-15">Web Designs</h3></div>
+	<p class="smaller xs-mw">We offer web designs course for those who like to bring out the beauty of their business product online.
+</p></div>
+</div>
+
+<div class="row mb-60 xs-mb-20">
+<div class="col-sm-1 col-lg-offset-1">
+	<img src="{% static "img/python.png" %}">
+</div>
+<div class="col-sm-4 col-md-3">
+		<div style="color:green; font-size:18px;font-weight:bold "
+	<h3 class="mb-15">Programming  (Python)</h3></div>
+	<p class="smaller xs-mw">We also offer programming language courses such as python. This language can be used to solve problems ranging from mathematical to web development problems. It offers much more.
+</p></div>
+</div>
+
+</div>
+
+</div><!-- End things we do -->
+
+
+
+<!-- Summary Started -->
+
+<h2 class="mb-15 text-center"> Course Outline</h2>
+<!-- <img style="width:100%;height:800px;" src="{% static "img/newg3.jpg" %}" alt="" class="mb-80 hidden-xs iphone-inline"> -->
+
+<div class="container">
+<div class="row mb-90 xs-mb-0">
+
+
+
+
+
+
+
+<div style="margin-top:5%;" class="row">
+
+{% for course in course %}
+<div class="col-sm-6 col-md-6 courselead" style="height:450px;">
+<div class="col-sm-2 col-md-2 wow rotateInUpLeft">
+{% if course.image %}
+<img src="{{course.image.url}}">
+{%endif%}
+</div>
+
+
+	<div class="col-md-10">
+<h3 class="mb-15" style="color:green!important;">{{course.heading}}</h3>
+<!-- <p class="mb-15" >{{course.benefit}}</p>
+<p class="mb-15">{{course.target}}</p>
+<p class="smaller xs-mb-40 xs-mw"> -->
+{{course.write_up|safe}}
+</p>
+
+{% if course.outline %}
+<a href="{{ course.outline.url }}" class="col-md-12" style="margin-top:5%;text-align:center;margin-bottom:4%;background:green;color:white;height:29px;box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);">View Course Outline</a>
+{%else%}
+<p>Outline Coming Soon.</p>
+
+{% endif %}
+</div>
+</div>
+
+{% endfor %}
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+<!-- Summary Ended -->
+
+
+
+<h2 class="text-center">Satisfied Clients</h2>
+
+<div id="bootstrap-touch-slider" style="margin-top:5%;background:white;" class="carousel col-md-12 col-sm-12 bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
+
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+				<li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+				<!--<li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>-->
+			</ol>
+
+			<!-- Wrapper For Slides -->
+			<div class="carousel-inner" role="listbox">
+
+				<!-- Third Slide -->
+				<div class="item active">
+
+					<!-- Slide Background -->
+					
+					<div class="container">
+						<div class="row">
+							<!-- Slide Text Layer -->
+							
+						</div>
+					</div>
+				</div>
+				<!-- End of Slide -->
+
+				<!-- Second Slide -->
+				{% for client in logos %}
+				<div class="item">
+
+					<!-- Slide Background -->
+					<div class="row sat-log">
+						<style>
+						.sat-log div{
+							margin-bottom:5%;
+
+						}
+						
+						.sat-log img{
+							height:150px!important;
+							width:150px!important;
+						}
+						</style>
+						
+						<div class="col-md-4">
+							
+							<img class="clientimg img-responsive" src="{{client.image.url}}" alt="Bootstrap" >
+								
+							</div>
+							
+							<!-- <div class="col-md-4">
+									<img class="clientimg" src="{% static "img/gb.png" %}" alt="Bootstrap" >
+								</div>
+					
+								<div class="col-md-4">
+										<img class="clientimg" src="{% static "img/last.png" %}" alt="Bootstrap" >
+									</div>
+					
+									<div class="col-md-4">
+											<img class="clientimg" src="{% static "img/soft.png" %}" alt="Bootstrap" >
+										</div> -->
+					
+					</div>
+
+
+				</div>
+				{% endfor %}
+						
+				<!-- End of Slide -->
+
+				<!-- Third Slide -->
+				<!-- <div class="item"> -->
+
+					<!-- Slide Background -->
+					<!-- <div class="row" style="margin-bottom:5%;"> -->
+							<!-- <div class="col-md-4">
+									<img class="clientimg" src="{% static "img/fmn.png" %}" alt="Bootstrap" >
+							</div>
+							
+							<div class="col-md-4">
+									<img class="clientimg" src="{% static "img/cway.png" %}" alt="Bootstrap" >
+								</div>
+							
+								<div class="col-md-4">
+										<img class="clientimg" src="{% static "img/cusson.png" %}" alt="Bootstrap" >
+									</div>
+							</div> -->
+
+					<!--<div class="bs-slider-overlay"></div>-->
+					
+				<!-- </div> -->
+				<!-- End of Slide -->
+
+
+			</div><!-- End of Wrapper For Slides -->
+
+			<!-- Left Control -->
+			<a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+				<span class="fa fa-angle-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+
+			<!-- Right Control -->
+			<a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+				<span class="fa fa-angle-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+
+		</div> <!-- End  bootstrap-touch-slider Slider -->
+</div>
+
+
+
+<!-- End Carousel -->
+
+
+<div style="margin-top:5%;" class="container">
+	<h2 style="margin-bottom:3%;color:#555;" class="text-center">Testimonials</h2>
+	<div class="row">
+		{% if testimonial %}
+		{%for test in testimonial %}
+		<div class="col-md-4">
+	<p  class="text-center text-muted">
+{{test.testimonial}}
+	</p>
+
+	<p class="text-center" style="margin-top:3%;">{{test.name}}</p>
+</div>
+{% endfor %}
+{% endif %}
+</div>
+	</div>
+
+
+
+
+
+
+
+
+<div class="level level-outro text-center">
+
+<div class="container">
+
+
+
+<h2 class="text-center text-muted" style="color:green!important;"> About US</h2>
+<p class="text-center" style="margin-bottom:5%;">
+LeadLeap Consulting Limited is a training and consulting firm which provide Microsoft Office Training and Consultancy for individuals & Companies. 
+LCL has experience in training small and large groups across diverse industries. Proven success in leveraging educational theories and methodologies to design, develop, and deliver successful training programs and integrate instructional technology to provide onsite and virtual training. Adept at organizing and facilitating Microsoft Office, Management and Team building training programs and activities
+Lead-Leap is passionate about helping businesses; both new and existing to develop winning strategies, offering insightful ideas, training, recommending, developing, and deploying IT based solutions that will improve productivity and profitability of the organizations. 
+The Lead-Leap team is constituted by young, vibrant, experienced and upwardly mobile professionals in the field of training and development, marketing and information technology, who are poised to see organisations grow and improve their performances, and to also compete favorably with other brands anywhere across the globe</p>
+<h3 class="text-center" style="color:green!important;margin-bottom:0%!important;">Vision</h3>
+<p class="text-center" style="margin-bottom:5%;">To become the leading Microsoft Office training provider in Nigeria and beyond</p>
+<h3 class="text-center" style="color:green!important;margin-bottom:0%!important;">Mission</h3>
+<p class="text-center">To become a knowledge centre where the training needs of our clients will be met through our various hands-on trainings and by continually creating and adding value through our well researched professional services
+</p>
+<!--			<form class="contact" method="get" action="/" accept-charset="UTF-8">
+
+<div class="h2 mb-20">Available 24/7 <br class="visible-xs-block"> For You</div>
+<p class="mb-35">Enter your Email Address to Subscribe to Our Newsletter
+
+</p><div class="btn-append dropdown-prepend">
+
+	<div class="dropdown">
+		<button class="btn btn-default dropdown-toggle" type="button" id="f1" data-toggle="dropdown" aria-expanded="true">
+		<span id="option-value-f1"></span>
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" data-displaytarget="#option-value-f1" data-inputtarget=".f1-target" role="menu" aria-labelledby="f1">
+			<li role="presentation" data-placeholder="US ( +1)" data-value="1" class="disabled">US ( +1)</li>
+		</ul>
+	</div>
+	<input class="text phoneNumber" name="tel" placeholder="Email Address" required="" type="tel">
+
+	<input class="submit appended" value="submit" type="submit">
+
+</div>
+
+</form>-->
+</div>
+
+
+
+
+
+</div>
+<div class="footer text-center">
+
+<div class="col-md-4 pull-left contact" style="">
+<!--<h3 class="text-center" style="cursor:pointer;color:green;">Contact Us</h3>-->
+<ul style="" class="text-center pull-right"><h3 style="color:green!important;" class="text-left">Contact</h3>
+<li style="color:#555;"  class="text-left">Telephone: +234-8108054165</li>
+<li style="color:#555;" class="text-left">Mobile: +234-8062468296</li>
+<li style="color:#555;" class="text-left" style="">E: leadleapconsult@gmail.com</li>
+
+
+		<h3 class="text-left" style="color:green!important;margin-top:4%!important;">Social Media</h3>
+<li  style="color:#555;" class="text-left">Twitter: @leadleapconsult</li>
+<li style="color:#555;" class="text-left">Instagram: Lead-Leap Consulting Limited</li>
+<li style="color:#555;" class="text-left">	Facebook: Lead-Leap Consulting Limited</li>
+<li style="color:#555;" class="text-left">		LinkedIn: Lead-Leap Consulting Limited</li>
+</ul>
+</div>
+<p class="fmenu">
+<a href="index.html">Copyright</a> | <strong class="text-success">Lead-Leap Consulting</strong> <a href="about.html">{% now "Y" %}</a>
+</p>
+
+</div>
+
+
+<script src="{% static "js/jquery-2.1.1.min.js" %}"></script>
+<script>window.jQuery || document.write('<script src="{% static "js/jquery-2.1.1.min.js" %}"><\/script>')</script>
+
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+<script src="{% static "js/dropdown.js" %}"></script>
+<!-- <script src="{% static "/js/modal.js" %}"></script> -->
+<script src="{% static "js/main.js" %}"></script>
+<script src="{% static "js/carosel.js" %}"></script>
+
+<!-- //-end- concat_js -->
+
+<script src="{% static "js/wow.min.js" %}"></script>
+
+<script>
+wow = new WOW(
+{
+
+}	)
+.init();
+</script>
+
+<script>
+$(function(){
+
+$(".item:first-child").addClass("active")
+$(".contactus").click(function(){
+$(".contact").toggle(2000);
+})
+
+$(".resource").click(function(){
+$(".resourcelist").toggle(2000);
+})
+
+})
+</script>
+
+</body></html>

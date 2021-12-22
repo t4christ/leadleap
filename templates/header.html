@@ -1,0 +1,90 @@
+<header>
+
+<style>
+.nav-tabs{
+  float:right;
+}
+
+</style>
+
+
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background:transparent;color:whitesmoke;border:none;">
+      <div class="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+         
+          </div>
+
+          <div class="navbar-collapse collapse">
+            <div class="menu">
+              <ul class="nav nav-tabs" role="tablist" style="border:none;">
+
+                {% if request.user.is_authenticated and request.user.is_head or request.user.is_admin %}
+                <li role="presentation"><a href= "/" class="active">Home</a></li>
+                <li role="presentation"><a href= "/{{request.user}}_dashboard/">Dashboard</a></li>
+                <li role="presentation"><a href= "/report/{{request.user}}">Report</a></li>
+                 <li role="presentation"><a href= "/generate_report/{{request.user}}">Download Report</a></li>
+                <li role="presentation"><a href= "/logout">Logout</a></li>
+
+
+                {% elif request.user.is_authenticated %}
+                <li role="presentation"><a href= "/" class="active">Home</a></li>
+                <li role="presentation"><a href= "/{{request.user}}_dashboard/">Dashboard</a></li>
+                <li role="presentation"><a href= "/logout">Logout</a></li>
+
+
+                {% elif user.username%}
+                    <li role="presentation"><a href= "/" class="active">Home</a></li>
+                <li role="presentation"><a href= "/{{user.username}}_dashboard/">Dashboard</a></li>
+
+                {% else %}
+                <li role="presentation"><a href= "/login">Login</a></li>
+                <li role="presentation"><a href= "/get_registered">Signup for Online Class</a></li>
+                <li role="presentation"><a href= "/online_test">Signup for Online Test</a></li>
+                
+                {% endif %}
+               <!-- <li role="presentation"><a href= "/{{request.user}}/student_profile/">Profile</a></li> -->
+               <!-- <li role="presentation"><a href= "/{{request.user}}/edit_studentprofile/">Edit_Profile</a></li> -->
+                    
+                <!--<li role="presentation"><a href= "blog.html">Blog</a></li>
+                <li role="presentation"><a href= "portfolio.html">Portfolio</a></li>
+                <li role="presentation"><a href= "contact.html">Contact</a></li>-->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    {% for message in messages %}
+{% if 'success' in message.tags %}
+
+<div class="alert alert-success" style="background:#3c763d;position:absolute;z-index:45;color:white;width:100%!important;font-weight:bold;">
+	<a class="close" href="#" data-dismiss="alert">×</a>
+	<p class="text-center">Success!
+
+		{{ message|striptags }}</p>
+
+</div>
+
+{% elif 'error' in message.tags %}
+<div class="alert" style="z-index:45;background:red!important;color:white;font-weight:bold;width:100%!important;">
+	<a class="close" href="#" data-dismiss="alert">×</a>
+	<p class="text-center">Error!
+
+		{{ message|striptags }}</p>
+
+</div>
+
+
+
+
+{% endif %}
+{% endfor %}
+  </header>

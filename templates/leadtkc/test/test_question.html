@@ -1,0 +1,326 @@
+  
+{% load static %}
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html class=" ueno-js ueno-no-touch ueno-history ueno-backgroundsize ueno-cssanimations ueno-cssgradients ueno-csstransforms ueno-csstransforms3d ueno-csstransitions ueno-video ueno-svg ueno-inlinesvg ueno-csscalc ueno-cssremunit ueno-cssvhunit ueno-cssvwunit ueno-no-iphone-safari" style=""><!--<![endif]--><head>
+<meta charset="utf-8">
+<meta name="description" content="BlackTie Free Bootstrap Theme">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+
+<title>Lead-Leap Consulting</title>
+
+<link rel="stylesheet" type="text/css" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
+<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+<link rel="stylesheet" href="{% static "css/main.css" %}">
+<link rel="stylesheet" href="{% static "css/animate.css" %}">
+<link rel="stylesheet" href="{% static "css/carosel.css" %}">
+<!--[if lte IE 8]>
+<link rel=stylesheet href="css/ie.css">
+<![endif]-->
+<script src="{% static "/js/modernizr.js" %}"></script>
+
+<script src="{% static "/js/respond.min.js" %}"></script>
+
+</head>
+
+<body class="loaded">
+<div class="level level-hero hero-home has-hint active-state" style="overflow:auto;">
+
+{% include 'header.html' %}
+
+<div class="hero-overlay visible-lg"></div>
+
+<div class="container-fluid question-wrap" >
+     
+    <div class="container-fluid advert" style="padding:0;margin-top:50px;">
+
+</div>
+
+  <div  class="row countbar" style="display:block;z-index:10000;position:fixed;top:0;right:0;padding:4px;">
+
+
+
+   <input type="hidden" class="ran_score" value="{{ran_score}}">
+    <input type="hidden" class="user" value="{{user.username}}">
+    <input type="hidden" class="link" value="/submit_test/{{user.username}}/">
+    
+        <div class="col-md-2 btn-warning timer text-center" id="recharge-time" style="right:0;float:leftt;width:50%;border:none;z-index:5;background-color:#3c763d;color:white;"><strong>Count Down</strong></div>
+        <div class="col-md-2 btn-warning score" id="score" style="right:0;width:50%;border:none;z-index:5;background-color:#3c763d;color:white;float:right;">Score:
+        {% for score in all_score %}
+          {{score.score}}
+        {% endfor %}
+        </div>
+
+      </div>
+
+      
+     <h2 class="text-center wel-quest" style="margin-top:52px;">WELCOME TO LEADLEAP ASSESSMENT PAGE</h2>  
+    <h3 class="text-center wel-quest" style="margin-top:52px;"> PLEASE READ INSTRUCTIONS</h3>
+      
+        <ul class="instruction">
+        <li class="center">1. REGISTRATION is required so we can have a proper record of your test!!</li>
+        <li class="center">2. Click on radio button to select an answer!!</li>
+        <li class="center">3. You don't have to waste time on unknown answers. Answer to the best of your ability!!</li>
+
+        <li class="center">4. When you are done with the questions before time runs out click submit or the system will auto submit when your time has expired.</li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+
+<button  id="start" class="col-md-2 btn-warning start-btn" style="float:right;color:white;background:#3c763d;border:none;z-index:100001">Start</button> 
+
+</div>
+
+
+    <div class="col-md-6 col-md-offset-3 result-wrap" style="margin-top:10%;margin-bottom:5%;">
+    <h2 id="score-result" style="text-align:center;color:white;"></h2>
+         
+  </div>
+
+<div class="col-md-10 col-md-offset-1 test-question" id="test-question" style="display:block;">
+    
+
+
+<h4 class="result text-center" style="display:none;">
+      <i id="respin" class="fa fa-spinner fa-spin fa-4x " ></i>
+    </h4>   
+
+</div>
+<!-- End of col-md-10 -->
+
+<style>
+.instruction li{
+  list-style:none;
+}
+.test-question p{
+  color:black;
+}
+.form-check input{
+  color:black;
+}
+
+.form-check label{
+  color:black;
+}
+.navigation{
+  background:#3c763d;
+}
+
+.navigation li a{
+  color:white;
+}
+
+body{
+font-family:'Actor';
+
+}
+
+li,h3,h2{
+  color:black!important;
+}
+@media screen and (min-width:992px){
+
+.full-height{
+min-height:fit-content;
+background-position:center;
+width:100%;
+}
+
+}
+</style>
+
+
+<style>
+
+.full-height,.level-hero{
+min-height:fit-content!important;
+background:whitesmoke!important;
+}
+.hero-overlay{
+  position:relative!important;
+}
+@media screen and (max-width:990px){
+
+body{
+font-family:'Actor';
+}
+
+.countbar{
+   margin-top:85px!important;
+  display:flex!important;
+  width:100%!important;
+}
+
+
+.hint-arrow{
+margin-bottom:-5%;
+}
+
+.sign-mup{
+margin-top:-5%!important;
+}
+
+}
+
+.welcome{
+  color:white!important;
+  margin-top:5%;
+  margin-bottom:5%;
+}
+.vid{
+  z-index:30;
+  overflow-y:scroll;
+ 
+}
+.video{
+  width:100%!important;
+  display:none;
+}
+
+.view{
+  color:white!important;
+  margin-top:2%s;
+}
+
+</style>
+<style>
+.countbar{
+  margin-top:50px;
+  display:flex;
+  width:30%;
+}
+.wel-quest{
+  color:white;
+  margin-bottom:2%;
+}
+@media screen and (max-width:570px){
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+</style>
+
+
+
+</div>
+
+<!--End Container Fluid-->
+</div>
+
+<!-- End of wrapper fluid -->
+
+<div class="footer text-center">
+
+<div class="col-md-4 pull-left contact" style="">
+<!--<h3 class="text-center" style="cursor:pointer;color:green;">Contact Us</h3>-->
+<ul style="" class="text-center pull-right"><h3 style="color:green!important;" class="text-left">Contact</h3>
+<li style="color:#555;"  class="text-left">Telephone: +234-8108054165</li>
+<li style="color:#555;" class="text-left">Mobile: +234-8062468296</li>
+<li style="color:#555;" class="text-left" style="">E: leadleapconsult@gmail.com</li>
+
+
+		<h3 class="text-left" style="color:green!important;margin-top:4%!important;">Social Media</h3>
+<li  style="color:#555;" class="text-left">Twitter: @leadleapconsult</li>
+<li style="color:#555;" class="text-left">Instagram: Lead-Leap Consulting Limited</li>
+<li style="color:#555;" class="text-left">	Facebook: Lead-Leap Consulting Limited</li>
+<li style="color:#555;" class="text-left">		LinkedIn: Lead-Leap Consulting Limited</li>
+</ul>
+</div>
+<p class="fmenu">
+<a href="index.html">Copyright</a> | <strong class="text-success">Lead-Leap Consulting</strong> <a href="about.html">{% now "Y" %}</a>
+</p>
+
+</div>
+
+<script src="{% static "/js/jquery-2.1.1.min.js" %}"></script>
+<script>window.jQuery || document.write('<script src="{% static "/js/jquery-2.1.1.min.js" %}"><\/script>')</script>
+
+<script src="{% static "/js/bootstrap.min.js" %}"></script>
+<script src="{% static "/js/dropdown.js" %}"></script>
+<script src="{% static "/js/main.js" %}"></script>
+<script src="{% static "/js/carosel.js" %}"></script>
+
+{%include "leadtkc/test/testjsfile.html" %}
+
+</body>
+</html>

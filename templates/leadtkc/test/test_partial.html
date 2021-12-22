@@ -1,0 +1,71 @@
+
+ 
+<div class="row" style="display:block;">
+
+    <div class="col-md-12">
+           {% for test in test %}
+   
+       <p>{{forloop.counter}}).  {{test.questions}}</p>
+          
+
+       <div class="form-check">
+       <div id="group-input">
+          <input type="hidden" value="answer{{test.id}}" class="getans">
+          <label class="container">{{test.choice1}}
+              <input type="radio" onchange="getName(event)"  name="answer{{test.id}}" id="answer{{test.id}}" value="{{test.choice1}}">
+              <span class="checkmark"></span>
+          </label>
+          </div>
+         </div>
+   
+         <div class="form-check">
+            <input type="hidden" value="answer{{test.id}}" class="getans">
+            <label class="container">{{test.choice2}}
+                <input  onchange="getName(event)" type="radio" name="answer{{test.id}}" id="answer{{test.id}}" value="{{test.choice2}}">
+                <span class="checkmark"></span>
+            </label>
+           </div>
+
+
+
+           <div class="form-check">
+              <input type="hidden" value="answer{{test.id}}" class="getans">
+              <label class="container">{{test.choice3}}
+                  <input  onchange="getName(event)" type="radio" name="answer{{test.id}}" id="answer{{test.id}}" value="{{test.choice3}}">
+                  <span class="checkmark"></span>
+              </label>
+             </div>
+
+
+
+
+             <div class="form-check">
+                <input type="hidden" value="answer{{test.id}}" class="getans">
+                <label class="container">{{test.choice4}}
+                    <input  onchange="getName(event)" type="radio" name="answer{{test.id}}" id="answer{{test.id}}" value="{{test.choice4}}">
+                    <span class="checkmark"></span>
+                </label>
+               </div>
+
+
+               {% if test.choice5 %}
+
+               <div class="form-check">
+                  <input type="hidden" value="answer{{test.id}}" class="getans">
+                  <label class="container">{{test.choice5}}
+                      <input onchange="getName(event)" type="radio" name="answer{{test.id}}" id="answer{{test.id}}" value="{{test.choice5}}">
+                      <span class="checkmark"></span>
+                  </label>
+                 </div>
+
+               {% endif %}
+
+               
+   
+         {% endfor %}      
+       </div> 
+   <form method="post">    
+   <button class="partial" type="submit" style="background:#3c763d;color:white;float:right">Submit</button>
+   </form>
+   </div>
+   <!-- End of row -->
